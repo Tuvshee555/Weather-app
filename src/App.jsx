@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="w-screen h-screen flex justify-center items-center bg-gray-400 rounded-3xl">
-      <div className="w-[100px] h-[100px] bg-[red] z-50 rounded-[50%] absolute"></div>
+      <div className="w-[100px] h-[100px] border-red-400 z-50 rounded-[50%] border-2 absolute"></div>
         <div className="w-full h-full rounded-3xl flex bg-neatral-100 relative">
           {/*White*/}
           <div className="w-1/2 h-full bg-neutral-100 flex justify-center items-center ">
