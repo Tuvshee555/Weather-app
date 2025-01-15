@@ -2,21 +2,50 @@ import { useState } from "react";
 import countriesData from "./data";
 
 function App() {
-  console.log(countriesData);
+  // console.log(countriesData);
+
+  // const [searchValue, setSearchValue] = useState("")
+  // const [isLoading, setIsLoading] = useState(false)
+  // const [filteredData, setFilteredData] = useState([])
+
+  // const onChange = (e) => {
+  //   setSearchValue(e.target.value)
+  // }
+  
+  // const data = countriesData
+
+  // useEffect(() => {
+  //   setIsLoading(true)
+  //   if (!searchValue) {
+  //     setFilteredData([])
+  //   } else {
+  //     const filtered = data.filter((el) => startsWith(searchValue))
+  //     setFilteredData(filtered)
+  //   }
+  //   setIsLoading(false)
+  // }, [searchValue])
+
+  // if (isLoading) {
+  //   return <div>is loading...</div>
+  // }
+  // return (
+  //   <div className="text-red-400 p-[100px]">
+
+  //   </div>
+  // )
 
   return (
     <>
-      <div className="h-1/2 flex justify-center items-center relative">
-        {/* Centering the circles */}
-        <div className="w-[100px] h-[100px] border-[#a7acb2] z-50 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="w-[340px] h-[340px] border-[#a7acb2] z-40 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="w-[540px] h-[540px] border-[#a7acb2] z-30 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="w-[940px] h-[940px] border-[#a7acb2] z-20 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-      </div>
-
-      <div className="w-full rounded-3xl flex bg-neutral-100 relative">
+      <div className="w-full rounded-3xl flex bg-neutral-100 relative h-[100vh]">
+        <div className=" flex justify-center items-center">
+          {/* Centering the circles */}
+          <div className="w-[100px] h-[100px] border-[#a7acb2] z-50 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="w-[340px] h-[340px] border-[#a7acb2] z-40 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="w-[540px] h-[540px] border-[#a7acb2] z-30 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="w-[940px] h-[940px] border-[#a7acb2] z-20 rounded-full border-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
         {/* White */}
-        <div className="w-1/2 h-full bg-neutral-100 flex justify-center items-center">
+        <div className="w-1/2 h-full bg-neutral-100 flex justify-center items-center z-[7]">
           <div className="w-[414px] h-[828px] bg-[#f3f4f6] rounded-3xl shadow-[0px_4px_12px_rgba(0,0,0,0.3)]">
             <div className="w-[414px] h-[514px] p-[56px_40px] rounded-3xl">
               <div className="flex justify-between">
