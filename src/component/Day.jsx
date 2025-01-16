@@ -4,10 +4,12 @@ import LocationIcon from "./Location-icon";
 import HeartIcon from "./Heart-Icon";
 import UserIcon from "./User-Icon";
 import { useEffect, useState } from "react";
+import countriesData from "../Data";
 const Day = (props) => {
   const [dayTemp, setDayTemp] = useState("")
   const [city, setCity] = useState('Ulaanbaatar');
   const [condition, setCondition] = useState("")
+  const [icon, setIcon] = useState("")
   const {selectedCity} = props;
   const API_KEY="f9703c47bec948389f382511251501"
   const getWeather = async () => {
@@ -17,13 +19,18 @@ const Day = (props) => {
       setDayTemp(result.forecast.forecastday[0].hour[5].temp_c)
       setCondition(result.forecast.forecastday[0].day.condition.text)
       setCity(result.location.name)
+      // if (result.forecast.forecastday[0].day.condition.text === "sunny"){
+      //   const mood = ''
+      // } else if
       console.log(result)
+      
     }catch(error){
       console.log(error)
     }
   }
   useEffect(() => {
     getWeather()
+    
   }, [selectedCity]);
 
   return (
