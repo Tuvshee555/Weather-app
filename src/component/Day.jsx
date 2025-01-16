@@ -28,7 +28,7 @@ const Day = (props) => {
 
   return (
     <div className="w-1/2 h-full min-w-[567px] bg-neutral-100 rounded-tl-3xl rounded-bl-3xl flex flex-col justify-center items-center">
-      <img src="EllipseDay.svg" className="mt-[-40%] ml-[-25%] absolute" />
+      <div className="mt-[-40%] ml-[-25%] absolute w-[176px] h-[176px] rounded-[50%] bg-[#FF8E27]"></div>
 
       <div className="w-1/2 h-3/4 backdrop-brightness-20 shadow-lg backdrop-blur-[2px] rounded-3xl flex flex-col items-center gap-10">
         <div className="flex justify-between py-12 w-9/12 ">
@@ -40,7 +40,7 @@ const Day = (props) => {
           </div>
           <LocationIcon />
         </div>
-        <img src="sunny.png" className="w-64" />
+        <img src="sun.png" className="w-64" />
         <div className="text-transparent bg-clip-text font-extrabold text-[110px] -mt-10 bg-gradient-to-b from-black to-white">
           {dayTemp}°
         </div>

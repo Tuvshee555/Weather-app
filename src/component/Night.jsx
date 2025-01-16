@@ -1,7 +1,11 @@
 import LocationIcon from "./Location-icon";
-import HomeIcon from "./Home-icon";
-import HeartIcon from "./Heart-icon";
-import UserIcon from "./User-ICon";
+
+import HomeIcon from "./Home-Icon";
+
+import HeartIcon from "./Heart-Icon";
+
+
+import UserIcon from "./User-Icon";
 
 import { useState, useEffect } from "react";
 const Night = (props) => {
@@ -30,7 +34,7 @@ const Night = (props) => {
   }, [selectedCity]);
   return (
     <div className="w-1/2 h-full bg-slate-900 rounded-tr-3xl rounded-br-3xl  flex justify-center items-center">
-      <img src="EllipseN.svg" className="absolute mt-[40%] mr-[-25%] w-[8%]" />
+      <div className="absolute mt-[40%] mr-[-25%] w-[8%] w-[176px] h-[176px] rounded-[50%] bg-[#6E72C9]"></div>
       <div className="w-1/2 h-3/4 backdrop-blur-md bg-bg-slate/75 shadow-xl backdrop-blur-[2px] rounded-3xl flex flex-col items-center gap-10">
         <div className="flex justify-between py-12 w-9/12 ">
           <div>
@@ -39,7 +43,7 @@ const Night = (props) => {
           </div>
           <LocationIcon />
         </div>
-        <img src="moon.svg" className="w-64" />
+        <img src="moon.png" className="w-64" />
         <div>
           <p className="text-transparent bg-clip-text font-extrabold text-[110px] -mt-10 bg-gradient-to-b from-white to-black">
             {temp}
