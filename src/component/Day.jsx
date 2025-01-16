@@ -1,10 +1,11 @@
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 import HomeIcon from "./Home-Icon";
 import LocationIcon from "./Location-icon";
 import HeartIcon from "./Heart-Icon";
 import UserIcon from "./User-Icon";
 import { useEffect, useState } from "react";
-import countriesData from "../Data";
+import Condition from "./Condition"
+// import countriesData from "../Data";
 const Day = (props) => {
   const [dayTemp, setDayTemp] = useState("")
   const [city, setCity] = useState('Ulaanbaatar');
@@ -19,8 +20,8 @@ const Day = (props) => {
       setDayTemp(result.forecast.forecastday[0].hour[5].temp_c)
       setCondition(result.forecast.forecastday[0].day.condition.text)
       setCity(result.location.name)
-      // if (result.forecast.forecastday[0].day.condition.text === "sunny"){
-      //   const mood = ''
+      // if (result.forecast.forecastday[0].day.condition.text === Conditions.day){
+      //  return 
       // } else if
       console.log(result)
       
