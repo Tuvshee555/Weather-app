@@ -4,7 +4,7 @@ import LocationIcon from "./Location-icon";
 import HeartIcon from "./Heart-Icon";
 import UserIcon from "./User-Icon";
 import { useEffect, useState } from "react";
-import Condition from "./Condition"
+// import Condition from "./Condition"
 // import countriesData from "../Data";
 const Day = (props) => {
   const [dayTemp, setDayTemp] = useState("")
