@@ -1,6 +1,5 @@
 import SearchIcon from "./Search";
 import { useEffect, useState } from "react";
-import countriesData from "../Data";
 import LocationIcon from "./Location-icon";
 const SearchBar = (props) => {
   const { SetSelctedCity } = props;
@@ -10,6 +9,7 @@ const SearchBar = (props) => {
 
   const OnChange = (e) => {
     setSearchValue(e.target.value);
+    // setSearchValue("")
   };
 
   const getCountries = async () => {
@@ -56,7 +56,7 @@ const SearchBar = (props) => {
         <SearchIcon />
         <input
           placeholder="Search"
-          className="w-full py-4 pl-[12%] pr-[2%] outline-none text-[32px] font-bold rounded-full"
+          className="w-full py-4 pl-[12%] pr-[2%] outline-none text-[32px] font-bold rounded-full cursor-pointer"
           value={searchValue}
           onChange={OnChange}
         />
@@ -66,7 +66,7 @@ const SearchBar = (props) => {
           {filteredData.map((el) => (
             <div
               key={el}
-              className="w-full flex hover:bg-gray-100 gap-4 py-3 pl-4"
+              className="w-full flex hover:bg-gray-100 gap-4 py-3 pl-4 cursor-pointer"
               onClick={() => handleChangeCity(el.toString())}
             >
               <LocationIcon />
