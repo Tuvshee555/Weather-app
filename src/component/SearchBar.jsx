@@ -13,25 +13,22 @@ const SearchBar = (props) => {
   };
 
   const getCountries = async () => {
-   
     try {
       const response = await fetch(
         "https://countriesnow.space/api/v0.1/countries"
       );
-      const result =await response.json();
-      const data = []
+      const result = await response.json();
+      const data = [];
       for (let i = 0; i < result.data.length; i++) {
         for (let j = 0; j < result.data[i].cities.length; j++) {
           const city = result.data[i].cities[j];
-          data.push(city + ", " + result.data[i].country);          
+          data.push(city + ", " + result.data[i].country);
         }
       }
-      setCountries(data)
+      setCountries(data);
     } catch (error) {
       console.log(error);
     }
-   
-  
   };
   useEffect(() => {
     getCountries();
